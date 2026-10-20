@@ -19,6 +19,7 @@
   "files": ["dist", "src/boas-vindas.css"],
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "prepare": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "node --experimental-strip-types --test src/**/*.teste.ts"
   },
