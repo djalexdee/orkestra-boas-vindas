@@ -1,0 +1,43 @@
+{
+  "name": "@orkestra-ai/boas-vindas",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "description": "Modal de boas-vindas e tour sem estado próprio. O pai passa o status e o passo; o pacote não grava nada.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djalexdee/orkestra-boas-vindas.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./estilo.css": "./src/boas-vindas.css"
+  },
+  "files": ["dist", "src/boas-vindas.css"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --experimental-strip-types --test src/**/*.teste.ts"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "react-dom": ">=19"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "happy-dom": "20.0.10",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
